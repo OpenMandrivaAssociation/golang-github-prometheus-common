@@ -1,0 +1,27 @@
+From dea4b45013cccddc69c07c83bf2ebf5943e5ff27 Mon Sep 17 00:00:00 2001
+From: Jan Chaloupka <jchaloup@redhat.com>
+Date: Sun, 6 Mar 2016 16:54:47 +0100
+Subject: [PATCH] change import path
+
+---
+ expfmt/encode.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/expfmt/encode.go b/expfmt/encode.go
+index 11839ed..392ca90 100644
+--- a/expfmt/encode.go
++++ b/expfmt/encode.go
+@@ -18,9 +18,9 @@ import (
+ 	"io"
+ 	"net/http"
+ 
++	"bitbucket.org/ww/goautoneg"
+ 	"github.com/golang/protobuf/proto"
+ 	"github.com/matttproud/golang_protobuf_extensions/pbutil"
+-	"github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg"
+ 
+ 	dto "github.com/prometheus/client_model/go"
+ )
+-- 
+1.9.3
+

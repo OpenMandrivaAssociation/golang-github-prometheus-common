@@ -1,0 +1,25 @@
+From 82dc7d1a828ca1e9caa8441a3f7b439c6dff1f25 Mon Sep 17 00:00:00 2001
+From: Jan Chaloupka <jchaloup@redhat.com>
+Date: Wed, 11 Jul 2018 13:53:30 +0200
+Subject: [PATCH] Fix formatting errors
+
+---
+ expfmt/text_parse.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/expfmt/text_parse.go b/expfmt/text_parse.go
+index 54bcfde..917bc4a 100644
+--- a/expfmt/text_parse.go
++++ b/expfmt/text_parse.go
+@@ -359,7 +359,7 @@ func (p *TextParser) startLabelValue() stateFn {
+ 		}
+ 		return p.readingValue
+ 	default:
+-		p.parseError(fmt.Sprintf("unexpected end of label value %q", p.currentLabelPair.Value))
++		p.parseError(fmt.Sprintf("unexpected end of label value %q", *(p.currentLabelPair.Value)))
+ 		return nil
+ 	}
+ }
+-- 
+2.7.5
+
